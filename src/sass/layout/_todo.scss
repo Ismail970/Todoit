@@ -1,0 +1,205 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as var;
+
+.items-container {
+  @include flex-center(column);
+  @include center-container;
+  translate: 0 -150px;
+
+  &__new-todo {
+    margin: 1em 0;
+    width: var.$layout-width;
+    position: relative;
+
+    &::after {
+      content: '';
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      border: 1px solid map-get(var.$light-theme-colors, "secondary");
+      display: block;
+      position: absolute;
+      translate: 25px -45px;
+      cursor: text;
+    }
+
+    input {
+      border-radius: var.$radius;
+      border: 0;
+      padding: 1.3em;
+      width: var.$layout-width;
+      padding-left: 3.6em;
+      color: map-get(var.$light-theme-colors , "text");
+      box-shadow: 0 5px 20px rgb(0, 0, 0, .1);
+      @include transition-ease(outline);
+
+      &:focus {
+        outline: 2px solid var.$accent;
+      }
+
+      &::-webkit-input-placeholder {
+        color: map-get(var.$light-theme-colors , "tertiary");
+      }
+
+      &::-moz-placeholder {
+        color: map-get(var.$light-theme-colors , "tertiary");
+      }
+
+      &:-ms-input-placeholder {
+        color: map-get(var.$light-theme-colors , "tertiary");
+      }
+
+      &::-ms-input-placeholder {
+        color: map-get(var.$light-theme-colors , "tertiary");
+      }
+
+      &::placeholder {
+        color: map-get(var.$light-theme-colors , "tertiary");
+      }
+    }
+  }
+
+  &__todo-items {
+    @include flex-center(column);
+    background-color: map-get(var.$light-theme-colors, "primary");
+    width: var.$layout-width;
+    border-radius: var.$radius;
+    box-shadow: 0 15px 20px rgb(202, 202, 202);
+
+    .item-lable {
+      width: var.$layout-width;
+      position: relative;
+      color: map-get(var.$light-theme-colors , "text");
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      padding: 1.3em 1em;
+      @include flex-center(row);
+      align-items: flex-end;
+      justify-content: flex-start;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        translate: -17px 23px;
+        background-color: map-get(var.$light-theme-colors , "secondary");
+        display: block;
+        position: absolute;
+      }
+
+      &__todo-checked {
+        position: relative;
+        color: map-get(var.$light-theme-colors , "secondary");
+
+        &::after {
+          content: "";
+          display: inline-block;
+          background-color: map-get(var.$light-theme-colors , "tertiary");
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          translate: 0 8px;
+          left: 0;
+        }
+      }
+
+      input {
+        visibility: hidden;
+        display: block;
+        height: 0;
+        position: absolute;
+      }
+
+      span {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        border: 1px solid map-get(var.$light-theme-colors, "secondary");
+        display: inline-block;
+        margin: 0 .7em 0 .4em;
+        @include transition-ease(border-color);
+
+        &:hover,
+        &:focus {
+          border-color: hsl(192, 100%, 67%);
+        }
+      }
+
+      input:checked+span {
+        background: url(../img/icon-check.svg) no-repeat, var.$checked-btn;
+        background-position: center;
+
+        &:hover,
+        &:focus {
+          border-color: map-get(var.$light-theme-colors, "secondary");
+        }
+      }
+
+      button {
+        margin-left: auto;
+        margin-right: .3em;
+        align-self: center;
+
+        img {
+          width: 15px;
+        }
+      }
+    }
+
+    .items-info {
+      @include flex-center(row);
+      padding: 1.3em 1.5em;
+      justify-content: space-between;
+      width: var.$layout-width;
+      color: map-get(var.$light-theme-colors , "tertiary");
+
+      button {
+        color: map-get(var.$light-theme-colors , "tertiary");
+        @include transition-ease(color);
+
+        &:hover,
+        &:focus {
+          color: map-get(var.$light-theme-colors , "text");
+        }
+      }
+    }
+  }
+
+  &__options {
+    @include flex-center(row);
+    width: var.$layout-width;
+    margin-top: 1em;
+    border-radius: var.$radius;
+    padding: 1em;
+    gap: 1.5em;
+    background-color: map-get(var.$light-theme-colors, "primary");
+    box-shadow: 0 5px 20px rgb(221, 221, 221);
+
+    &__btn {
+      color: map-get(var.$light-theme-colors , "text");
+      @include transition-ease(color);
+
+      &:hover,
+      &:focus {
+        color: map-get(var.$light-theme-colors , "tertiary");
+      }
+    }
+
+    &__active {
+      color: var.$accent;
+      font-weight: map-get(var.$font-weights, "bold");
+
+      &:hover,
+      &:focus {
+        color: var.$accent;
+      }
+    }
+  }
+}
+
+.attribution {
+  margin-bottom: 1em;
+}

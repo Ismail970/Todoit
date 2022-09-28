@@ -1,0 +1,56 @@
+@-webkit-keyframes add-checked {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes add-checked {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.item-lable__todo-checked {
+  &::after {
+    -webkit-animation: add-checked .2s linear;
+    animation: add-checked .2s linear;
+  }
+}
+
+@-webkit-keyframes show-check {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-check {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.item-lable {
+  -webkit-animation: show-check .2s linear;
+  animation: show-check .2s linear;
+}
+
+input:checked+span {
+  -webkit-animation: show-check .2s linear;
+  animation: show-check .2s linear;
+}

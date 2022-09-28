@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as var;
+
+@mixin media-very-small {
+  @media (max-width: 499px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin transition-ease($target) {
+  transition: $target 350ms ease;
+}
+
+@mixin flex-center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center-container {
+  max-width: var.$mobile-max-width;
+  margin: 0 auto;
+}
+
+@mixin header-bg($path) {
+  padding: 3em 2em 10em 2em;
+  background: url($path) no-repeat;
+  background-size: cover;
+}

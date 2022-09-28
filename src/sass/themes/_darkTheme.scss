@@ -1,0 +1,110 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as *;
+
+.body-dark {
+  background-color: map-get(var.$dark-theme-colors, "body-bg");
+
+  .header {
+    @include header-bg("../img/bg-mobile-dark.jpg");
+  }
+
+  .items-container {
+
+    &__new-todo {
+      &::after {
+        border-color: map-get(var.$dark-theme-colors, "tertiary");
+      }
+
+      input {
+        color: map-get(var.$dark-theme-colors , "text");
+        background-color: map-get(var.$dark-theme-colors , "el-bg");
+        box-shadow: 0 5px 10px rgb(0, 0, 0, .3);
+
+        &::-webkit-input-placeholder {
+          color: map-get(var.$dark-theme-colors , "placeholder");
+        }
+
+        &::-moz-placeholder {
+          color: map-get(var.$dark-theme-colors , "placeholder");
+        }
+
+        &:-ms-input-placeholder {
+          color: map-get(var.$dark-theme-colors , "placeholder");
+        }
+
+        &::-ms-input-placeholder {
+          color: map-get(var.$dark-theme-colors , "placeholder");
+        }
+
+        &::placeholder {
+          color: map-get(var.$dark-theme-colors , "placeholder");
+        }
+      }
+    }
+
+    &__todo-items {
+      background-color: map-get(var.$dark-theme-colors , "el-bg");
+      box-shadow: 0 5px 20px rgb(0, 0, 0, .5);
+
+      .item-lable {
+        color: map-get(var.$dark-theme-colors , "text");
+
+        &::after {
+          background-color: map-get(var.$dark-theme-colors , "tertiary");
+        }
+
+        span {
+          border: 1px solid map-get(var.$dark-theme-colors, "tertiary");
+        }
+
+        &__todo-checked {
+          color: map-get(var.$dark-theme-colors , "secondary");
+
+          &::after {
+            background-color: map-get(var.$dark-theme-colors , "placeholder");
+          }
+        }
+      }
+
+      .items-info {
+        color: map-get(var.$dark-theme-colors , "secondary");
+
+        button {
+          color: map-get(var.$dark-theme-colors , "secondary");
+
+          &:hover,
+          &:focus {
+            color: map-get(var.$dark-theme-colors , "text");
+          }
+        }
+      }
+    }
+
+    &__options {
+      background-color: map-get(var.$dark-theme-colors, "el-bg");
+      box-shadow: 0 5px 20px rgb(0, 0, 0, .5);
+
+      &__btn {
+        color: map-get(var.$dark-theme-colors , "placeholder");
+
+        &:hover,
+        &:focus {
+          color: map-get(var.$dark-theme-colors , "primary");
+        }
+      }
+
+      &__active {
+        color: var.$accent;
+
+        &:hover,
+        &:focus {
+          color: var.$accent;
+        }
+      }
+    }
+  }
+
+  .attribution {
+    color: white;
+  }
+}

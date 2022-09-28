@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as *;
+
+.header {
+  @include header-bg("../img/bg-mobile-light.jpg");
+
+  &__title {
+    color: map-get(var.$light-theme-colors, "primary");
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  &__theme-btn {
+    width: 30px;
+    margin-bottom: .5em;
+  }
+
+  &__container {
+    @include center-container;
+    display: flex;
+    justify-content: space-between;
+  }
+}

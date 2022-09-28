@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Todo app</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/sass/main.scss">
+
+    <script defer type="module" src="src/js/controller.js"></script>
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div class="header__container">
+        <h1 class="header__title">Todo</h1>
+        <button class="header__theme-btn"><img src="src/img/icon-moon.svg" alt="dark theme"></button>
+      </div>
+    </header>
+
+    <div class="items-container">
+      <label for="new-todo" class="items-container__new-todo">
+        <input type="text" aria-label="add todo item" name="New Todo" placeholder="Create a new todo..." id="new-todo">
+      </label>
+
+      <div class="items-container__todo-items">
+
+        <!-- Test -->
+        <!-- <label for="todo-item1" class="item-lable" data-state="active">
+          <input type="checkbox" name="Todo item" id="todo-item1">
+          <span></span>
+          <p>Shores1</p>
+          <button id="todo-item-btn"><img src="src/img/icon-cross.svg" alt="cross"></button>
+        </label>
+
+        <label for="todo-item2" class="item-lable" data-state="active">
+          <input type="checkbox" name="Todo item" id="todo-item2">
+          <span></span>
+          <p>Shores2</p>
+          <button id="todo-item-btn"><img src="src/img/icon-cross.svg" alt="cross"></button>
+        </label>
+
+        <label for="todo-item3" class="item-lable" data-state="active">
+          <input type="checkbox" name="Todo item" id="todo-item3">
+          <span></span>
+          <p>Shores3</p>
+          <button id="todo-item-btn"><img src="src/img/icon-cross.svg" alt="cross"></button>
+        </label>
+
+        <label for="todo-item4" class="item-lable" data-state="active">
+          <input type="checkbox" name="Todo item" id="todo-item4">
+          <span></span>
+          <p>Shores4</p>
+          <button id="todo-item-btn"><img src="src/img/icon-cross.svg" alt="cross"></button>
+        </label> -->
+
+        <div class="items-info">
+          <p>
+            <span id="items-num">0</span>
+            items left
+          </p>
+          <button class="items-clear">Clear Completed</button>
+        </div>
+      </div>
+
+      <div class="items-container__options">
+        <button class="items-container__options__btn items-container__options__active">All</button>
+        <button class="items-container__options__btn">Active</button>
+        <button class="items-container__options__btn">Completed</button>
+      </div>
+
+    </div>
+
+    <!-- Credit -->
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Ismail</a>.
+    </div>
+  </body>
+
+</html>

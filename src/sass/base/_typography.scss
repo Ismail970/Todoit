@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as *;
+
+body {
+  font-family: $font-stack;
+  font-size: $font-size;
+}
+
+.header {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.attribution {
+  font-size: .6em;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}

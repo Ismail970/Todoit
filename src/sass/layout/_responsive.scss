@@ -1,0 +1,66 @@
+@use "../abstracts/mixins" as *;
+
+@include media-very-small {
+
+  .header__container,
+  .items-container {
+    max-width: 350px;
+    font-size: 1rem;
+
+    &__new-todo {
+      &::after {
+        translate: 25px -41px;
+      }
+    }
+  }
+}
+
+@include media-lg {
+
+  .header__container,
+  .items-container {
+    max-width: 500px;
+
+    &__todo-items {
+      .items-info {
+        font-size: .9rem;
+      }
+    }
+
+    &__options {
+      translate: 0 -40px;
+      gap: 1rem;
+      margin-top: 0;
+      width: 0;
+      height: 0;
+      font-size: .9rem;
+      box-shadow: none;
+    }
+
+    .item-lable {
+
+      button {
+        opacity: 0;
+        @include transition-ease(opacity);
+      }
+
+      &:hover button {
+        opacity: 1;
+      }
+    }
+  }
+
+  .header {
+    background: url("../img/bg-desktop-light.jpg") no-repeat;
+  }
+
+  .body-dark {
+    .header {
+      @include header-bg("../img/bg-desktop-dark.jpg");
+    }
+
+    .items-container__options {
+      box-shadow: none;
+    }
+  }
+}
