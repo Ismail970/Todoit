@@ -9,7 +9,13 @@
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](screenshots/screenshot-desktop-todo-app-light.png)
+
+![](screenshots/screenshot-desktop-todo-app-dark.png)
+
+![](screenshots/screenshot-mobile-todo-app-light.png)
+
+![](screenshots/screenshot-mobile-todo-app-dark.png)
 
 ### Links
 
@@ -21,5 +27,6 @@
 
 - Semantic HTML5 markup
 - SCSS/SASS
-- Javascript
-- Mobile-first workflow# Todo-app
+- Javascript/ES6+
+- Custom architecture
+- Mobile-first workflow
