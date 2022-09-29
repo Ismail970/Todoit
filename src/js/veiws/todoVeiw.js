@@ -15,6 +15,7 @@ class todoView {
 
     this._data = data;
     this._id = id;
+    this._state = state;
 
     this._generateRenderMarkup(id, data, state);
 
