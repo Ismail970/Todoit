@@ -19,7 +19,7 @@
 
 ### Links
 
-- **Live Site URL**: https://ismail-todoit.netlify.app/
+- **Live Site URL**: ismail-todoit-app.netlify.app
 
 ## Process
 
