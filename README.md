@@ -1,4 +1,4 @@
-# Todo app
+# TodoIt
 
 ## Table of contents
 
@@ -9,17 +9,17 @@
 
 ### Screenshot
 
-![](screenshots/screenshot-desktop-todo-app-light.png)
+![](screenshots/screenshot-desktop-todoit-app-light.png)
 
-![](screenshots/screenshot-desktop-todo-app-dark.png)
+![](screenshots/screenshot-desktop-todoit-app-dark.png)
 
-![](screenshots/screenshot-mobile-todo-app-light.png)
+![](screenshots/screenshot-mobile-todoit-app-light.png)
 
-![](screenshots/screenshot-mobile-todo-app-dark.png)
+![](screenshots/screenshot-mobile-todoit-app-dark.png)
 
 ### Links
 
-- **Live Site URL**: https://ismail-todo-app.netlify.app/
+- **Live Site URL**: https://ismail-todoit.netlify.app/
 
 ## Process
 
