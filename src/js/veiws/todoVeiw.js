@@ -81,7 +81,6 @@ class todoView {
     });
   }
 
-  // refactor
   _addHandlerCheckBox () {
     this._parentEl.addEventListener("change", function (e) {
       let items = getLocalStorage("todo", []);
