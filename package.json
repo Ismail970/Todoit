@@ -1,7 +1,7 @@
 {
-  "name": "todo-app",
+  "name": "todoit",
   "version": "1.2.0",
-  "description": "Todo application to organize and remember your tasks",
+  "description": "Todo web application",
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",

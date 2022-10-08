@@ -19,7 +19,7 @@
 
 ### Links
 
-- [**Live Site**](https://ismail-todoit-app.netlify.app/)
+- [**Live Site**](https://ismail-todoit.netlify.app/)
 
 ## Process
 
@@ -29,4 +29,5 @@
 - SCSS/SASS
 - Javascript/ES6+
 - Custom architecture
+- Bundled with parcel
 - Mobile-first workflow
