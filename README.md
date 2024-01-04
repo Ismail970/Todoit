@@ -1,11 +1,6 @@
 # TodoIt
 
-## Table of contents
-
-- [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
+[**Demo**](https://ismail-todoit.netlify.app/)
 
 ### Screenshot
 
@@ -16,18 +11,3 @@
 ![](screenshots/screenshot-mobile-todoit-app-light.png)
 
 ![](screenshots/screenshot-mobile-todoit-app-dark.png)
-
-### Links
-
-- [**Live Site**](https://ismail-todoit.netlify.app/)
-
-## Process
-
-### Built with
-
-- Semantic HTML5 markup
-- SCSS/SASS
-- Javascript/ES6+
-- Custom architecture
-- Bundled with parcel
-- Mobile-first workflow
